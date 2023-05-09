@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlantManager : MonoBehaviour
 {
     public static PlantManager Instance; 
-
+    
     public Plant[] plants;
     public Plant[] activePlants;
 
@@ -20,13 +20,22 @@ public class PlantManager : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        IncrementPlantGrowth();
+        timer += Time.deltaTime;
+        if (timer > 5f) {
+            IncrementPlantGrowth();
+            timer = 0f;
+        }
+
     }
 
     public void IncrementPlantGrowth(){
         foreach(Plant plant in plants) {
-            if (plant.growthBool == true){
-                plant.growthTime -= 0.01f;
+            if (plant.growthBool) {
+                plant.growthTime += 0.1f;
+                if (plant.growthTime >= 100f) {
+                    plant.growthTime = 100f;
+                    plant.growthBool = false;
+                }
             }
         }
     }

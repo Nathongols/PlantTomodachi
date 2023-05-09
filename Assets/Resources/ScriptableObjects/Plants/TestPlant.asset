@@ -16,7 +16,7 @@ MonoBehaviour:
   plantName: TestPlant
   id: 1
   price: 0
-  growthTime: 45.105484
-  waterNeeded: 33
+  growthTime: 34
+  waterNeeded: 17.999962
   fertilizerNeeded: 0
-  growthBool: 1
+  growthBool: 0

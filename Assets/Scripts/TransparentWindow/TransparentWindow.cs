@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
@@ -44,9 +42,7 @@ public class TransparentWindow : MonoBehaviour
         SetWindowPos(hWnd, new IntPtr(-1), 0, 0, 0, 0, 0);
 
     }
-
 #endif
-
     private void Update() {
         SetClickThrough(Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)) == null);
     }

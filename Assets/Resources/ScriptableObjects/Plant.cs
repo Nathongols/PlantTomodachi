@@ -9,7 +9,7 @@ public class Plant : ScriptableObject {
     public int id; 
     public int price;
     public float growthTime;
-    public int waterNeeded;
+    public float waterNeeded;
     public int fertilizerNeeded;
     public bool growthBool;
 }
